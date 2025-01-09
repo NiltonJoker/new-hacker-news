@@ -6,8 +6,6 @@ export interface PostContextType {
   handleFavorite: (post: PostItem) => void;
 }
 
-
-
 const PostContext = createContext<PostContextType | undefined>(undefined);
 
 export default PostContext

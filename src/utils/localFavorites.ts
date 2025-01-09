@@ -14,7 +14,7 @@ const toggleFavorite = (post: PostItem): PostItem[] => {
     return newFavorites
   }
 
-  const newFavorites = [...favorites, post]
+  const newFavorites = [post, ...favorites]
 
   localStorage.setItem('favorites', JSON.stringify(newFavorites))
   
