@@ -1,5 +1,5 @@
-import { createContext } from 'react';
-import { PostItem } from '../types/post';
+import { createContext } from "react";
+import { PostItem } from "../types/post";
 
 export interface PostContextType {
   favorites: PostItem[];
@@ -8,4 +8,4 @@ export interface PostContextType {
 
 const PostContext = createContext<PostContextType | undefined>(undefined);
 
-export default PostContext
+export default PostContext;

@@ -2,8 +2,8 @@ import { memo } from "react";
 
 interface Props<T> {
   name: string;
-  setFilter: (filter: T) => void;
   options: { label: string; value: T }[];
+  setFilter: (filter: T) => void;
 }
 
 function SelectFilter<T>({ name, setFilter, options }: Props<T>) {
@@ -11,7 +11,7 @@ function SelectFilter<T>({ name, setFilter, options }: Props<T>) {
     <div className="flex my-4">
       <select
         name={name}
-        className=" w-full md:w-44  h-10 border border-gray-400 rounded-md focus-visible:outline-none p-2 "
+        className=" w-full md:w-44 h-10 border border-gray-400 rounded-md focus-visible:outline-none p-2 "
         onChange={(e) => setFilter(e.target.value as T)}
       >
         {options.map((option) => (
@@ -24,14 +24,11 @@ function SelectFilter<T>({ name, setFilter, options }: Props<T>) {
   );
 }
 
-
 const SelectFilterMemorized = memo(SelectFilter, (prevProps, nextProps) => {
   return (
     prevProps.options === nextProps.options &&
     prevProps.setFilter === nextProps.setFilter
   );
-}) as <T>(
-  props: Props<T>
-) => JSX.Element;
+}) as <T>(props: Props<T>) => JSX.Element;
 
 export default SelectFilterMemorized;

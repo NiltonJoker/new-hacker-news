@@ -1,5 +1,3 @@
-import React from "react";
-
 import HeartFill from "../assets/heart-fill.svg";
 import Heart from "../assets/heart.svg";
 import Clock from "../assets/clock.svg";

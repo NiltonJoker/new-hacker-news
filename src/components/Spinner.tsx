@@ -1,5 +1,3 @@
-
-
 export default function Spinner() {
   return (
     <div role="status" className="mt-4 flex place-items-center justify-center">

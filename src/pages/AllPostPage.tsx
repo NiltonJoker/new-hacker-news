@@ -62,8 +62,6 @@ export default function AllPostPage() {
           Load More
         </button>
       )}
-
-      
     </>
   );
 }

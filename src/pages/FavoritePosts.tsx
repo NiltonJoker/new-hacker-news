@@ -9,9 +9,9 @@ import { OrderBy } from "../types";
 export default function FavoritePosts() {
   const { favorites } = usePost();
 
-  const [filter, setFilter]  = useState<OrderBy>(ORDER_BY[0].value);
+  const [filter, setFilter] = useState<OrderBy>(ORDER_BY[0].value);
 
-  if(favorites.length === 0) {
+  if (favorites.length === 0) {
     return <p className="text-center">No favorite posts</p>;
   }
 
@@ -19,10 +19,13 @@ export default function FavoritePosts() {
 
   return (
     <>
-      <SelectFilterMemorized<OrderBy> name="orderby" setFilter={setFilter} options={ORDER_BY} />
+      <SelectFilterMemorized<OrderBy>
+        name="orderby"
+        setFilter={setFilter}
+        options={ORDER_BY}
+      />
 
       <PostList posts={filteredFavorites} />
-    
     </>
   );
 }
