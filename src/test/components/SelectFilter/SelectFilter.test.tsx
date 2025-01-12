@@ -54,5 +54,4 @@ describe("SelectFilter", () => {
     expect(select.value).toBe("1"); // O el valor predeterminado esperado
   });
 
-
 });
